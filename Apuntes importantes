@@ -1,0 +1,9 @@
+
+//EL spring.jpa.generate-ddl=true del archivo aplication.properties
+//es importante, ya que cuando se arranca la aplicacion por primera vez se creen automaticamente las tablas, \
+// despues de la primera vez ya no es necesario y no apsaria nada
+//Las tablas se crean a partir de las clases Entity y la anotacion @Table
+//La tabla tambien se podria crear de forma manual o ya existir y omitiriamos esta configuracion
+
+//EL logging.level.org.hibernate.SQL=debug del archivo aplication.properties
+//El logging.level.org.hibernate.SQL=debug nos muestra la consulta que se esta generando por consola
