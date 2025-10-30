@@ -9,6 +9,7 @@
 
 
 POSTGREST
+*logging.level.org.hibernate.SQL=debug del archivo aplication.properties nos muestra la consulta que se esta generando por consola
 *El valor msvc_cursos de -> spring.datasource.url=jdbc:postgresql://localhost:5432/msvc_cursos -> Nos dice el nombre del esquema al q apunta
 *spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true -> ES recomendable para evitar errores en las consultar con algunos tipos de campos
 
@@ -16,3 +17,18 @@ CONTENEDOR DOCKER
 Es una amquina que se ejecuta dentro de nuestra maquina Host, maquina aislada e independiente con su propio sistema operativo tipicamente linux,
 SO muy rapido liviano. NO es una Virtual Box
 Docker no es q instale un S.O completo, si no una capa muy fina para q funcione con lo basico.
+
+
+
+ *BEAN o Entity
+ *Api validation de Java => La dependecia en el pom.xml de spring-boot-starter-validation Nos sirve para poder agregar ciertas anotaciones a los Bean,
+  osea a los entity por ejemplo @NotEmpty
+ -@Column() ponemos el nombre por si en la tabla de BD se llama diferente
+ -@NotEmpty valida que el campo no sea vacio, otra opcion @NotEmpty(message = "mensaje personalizado")
+ -@NotBlank valida tanto vacio como espacios en blanco
+
+ *El , BindingResult result siempre debe ir como segundo argumento de una funcion
+ *error.getField() devuelve el error con el nombre del campos
+
+ Repositories
+ Optional<Usuario> findByEmail(String email); Los metodos deben llevar la palabra clave find para q Nos ayude con las query

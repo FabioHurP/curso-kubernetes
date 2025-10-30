@@ -8,8 +8,13 @@ import java.util.Optional;
 //Los SERVICE son para trabajar la logica de negocio, lod datos, los DAO
 
 public interface UsuarioService {
+
     List<Usuario> listar();
     Optional<Usuario> porId(Long id);//Evitar objeto null y el null pointer exception
     Usuario guardar(Usuario usuario);
     void eliminar(Long id);
+
+    Optional<Usuario> buscarPorEmail(String email);
+
+    boolean existePorEmail(String email);
 }
